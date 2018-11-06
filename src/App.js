@@ -7,9 +7,15 @@ class App extends Component {
 
   render() {
     return (
-      <div id="quote-box">
-      <div id="text"></div>
-      <div id="author"></div>
+      <div className = "jumbotron">
+        <div className = "container">
+          <div id="quote-box">
+            <div id="text">dhgdfgdsfgdsfg</div>
+            <div id="author">sdfsdfsdf</div>
+            <button id="new-quote">New Quote</button>
+            <a id="tweet-quote">tweet quote</a>
+          </div>
+        </div>
       </div>
     );
   }
