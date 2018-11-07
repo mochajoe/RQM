@@ -17,7 +17,8 @@ class Quote extends Component {
       .then(results => results.json())
       .then( (data) => {
          this.setState({
-          quotes:data
+          quotes:data,
+          isLoaded:true
          })
         })
       .catch(error => console.error('Error',error))
@@ -35,6 +36,11 @@ class Quote extends Component {
   }
 
   render() {
+
+    if(this.state.isLoaded === false) {
+
+      return <div>not loaded yet</div>
+    }
     return (
       <div className = "jumbotron">
         <div className = "container">
