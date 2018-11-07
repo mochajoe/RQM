@@ -16,11 +16,11 @@ class Quote extends Component {
       .then(results => results.json())
       .then( data => {
         let quotted =  data.quotes[9].quote
-        return this.setState({
+         this.setState({
           quote:quotted
-        })  
         })
-    
+        })
+
   }
 
   render() {
