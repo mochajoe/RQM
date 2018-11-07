@@ -9,10 +9,11 @@ class Quote extends Component {
       quotes: '',
       isLoaded: false
     }
+    this.clicked = this.clicked.bind(this)
   }
 
   componentDidMount() {
-    fetch("https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en")
+    fetch("https://talaikis.com/api/quotes/random/")
       .then(results => results.json())
       .then( (data) => {
          this.setState({
@@ -20,7 +21,17 @@ class Quote extends Component {
          })
         })
       .catch(error => console.error('Error',error))
+  }
 
+  clicked() {
+     fetch("https://talaikis.com/api/quotes/random/")
+      .then(results => results.json())
+      .then( (data) => {
+         this.setState({
+          quotes:data
+         })
+        })
+      .catch(error => console.error('Error',error))
   }
 
   render() {
@@ -28,10 +39,10 @@ class Quote extends Component {
       <div className = "jumbotron">
         <div className = "container">
           <div id="quote-box">
-            <div id="text">{this.state.quotes.quoteText}</div>
-            <div id="author"> - {this.state.quotes.quoteAuthor}</div>
-            <button id="new-quote">New Quote</button>
-            <a id="tweet-quote">tweet quote</a>
+            <div id="text">{this.state.quotes.quote}</div>
+            <div id="author">{this.state.quotes.author}</div>
+            <button id="new-quote" onClick = {this.clicked}>New Quote</button>
+            <a id="tweet-quote" href="http://twitter.com/intent/tweet">tweet quote</a>
           </div>
         </div>
       </div>
