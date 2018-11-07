@@ -6,7 +6,8 @@ class Quote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes: "",
+      quotes: '',
+      isLoaded: false
     }
   }
 
@@ -28,7 +29,7 @@ class Quote extends Component {
         <div className = "container">
           <div id="quote-box">
             <div id="text">{this.state.quotes.quoteText}</div>
-            <div id="author">sdfsdfsdf</div>
+            <div id="author"> - {this.state.quotes.quoteAuthor}</div>
             <button id="new-quote">New Quote</button>
             <a id="tweet-quote">tweet quote</a>
           </div>
