@@ -44,12 +44,13 @@ class Quote extends Component {
     return (
 
          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-          <div id="quote-box" className ="jumbotron">
+          <div id="quote-box" className ="jumbotron" className = "display-5">
             <div id="text">"{this.state.quotes.quote}"</div>
             <br />
             <div id="author"> - {this.state.quotes.author}</div>
+            <br />
             <button id="new-quote" onClick = {this.clicked}>New Quote</button>
-            <a id="tweet-quote" href="http://twitter.com/intent/tweet">tweet quote</a>
+            <button><a id="tweet-quote" href="http://twitter.com/intent/tweet">Tweet Quote</a></button>
           </div>
         </div>
     );
