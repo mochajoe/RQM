@@ -42,17 +42,18 @@ class Quote extends Component {
       return <div>not loaded yet</div>
     }
     return (
-      <div className = "jumbotron">
-        <div className = "container">
-          <div id="quote-box">
-            <div id="text">{this.state.quotes.quote}</div>
-            <div id="author">{this.state.quotes.author}</div>
+
+         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+          <div id="quote-box" className ="jumbotron">
+            <div id="text">"{this.state.quotes.quote}"</div>
+            <br />
+            <div id="author"> - {this.state.quotes.author}</div>
             <button id="new-quote" onClick = {this.clicked}>New Quote</button>
             <a id="tweet-quote" href="http://twitter.com/intent/tweet">tweet quote</a>
           </div>
         </div>
-      </div>
     );
+
   }
 }
 
