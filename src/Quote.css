@@ -10,3 +10,7 @@
 .tweet-quote,a:hover {
     color: white;
 }
+
+body {
+	background-color : grey;
+}
