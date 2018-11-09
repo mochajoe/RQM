@@ -48,17 +48,25 @@ class Quote extends Component {
     }
 
     return (
-
-         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-          <div id="quote-box" style={{width: '25rem',borderColor:'black'}}>
-            <div id="text">"{this.state.quotes.quote}"</div>
-            <br />
-            <div id="author"> - {this.state.quotes.author}</div>
-            <br />
-            <button id="new-quote" type= "button" onClick = {this.clicked} className = "btn btn-primary btn-lg">New Quote</button>
-            <button><a id="tweet-quote" href="http://twitter.com/intent/tweet">Tweet Quote</a></button>
+      
+        <div style = {{height: '100vh'}}>
+          <div className="container d-flex h-100">
+            <div className="row align-self-center w-100" id="quote-box">
+              <div className  = "col-6 mx-auto"> 
+                <div className="jumbotron">
+                  <div id="text">"{this.state.quotes.quote}"</div>
+                  <br />
+                  <div id="author"> - {this.state.quotes.author}</div>
+                  <br />
+                  <br />
+                  <button id="new-quote" type= "button" onClick = {this.clicked} className = "btn btn-primary btn-lg">New Quote</button>
+                  <a style= {{float: 'right'}} className="btn btn-primary btn-lg" id="tweet-quote" href="http://twitter.com/intent/tweet">Tweet Quote</a>
+                </div>
+              </div> 
+            </div>
           </div>
         </div>
+  
     );
 
   }

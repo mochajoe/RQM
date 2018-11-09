@@ -1,8 +1,12 @@
 .quote-box {
-  position: center;
+  border-color: black;
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tweet-quote,a:hover {
+    color: white;
 }
