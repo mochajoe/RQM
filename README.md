@@ -1,3 +1,5 @@
+https://stormy-tor-90278.herokuapp.com/
+
 # Random Quote Machine
 ## What is the Random Quote Machine?
  > Returns the a Random Quote, Tweet it if you wish!
@@ -32,7 +34,7 @@ npm install
 
 Open index.html
 ```sh
-# double click on index.html
-open the index.html with your browser
+# npm start
+open the localhost:3000 with your browser
 ```
 
